@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-08-17T18:00:14.353Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="qRq9IXtmYhNr3fCEXjX_" version="21.6.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-08-17T18:10:48.939Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" etag="wg3YoW631U7_pgUsTfHl" version="21.6.8" type="github">
   <diagram name="페이지-1" id="zYDwYkXvaFLQdOSwnvKY">
-    <mxGraphModel dx="2261" dy="907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2261" dy="758" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -68,7 +68,7 @@
           <mxGeometry y="150" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-60" value="&lt;h3&gt;증서교부기본&lt;/h3&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-          <mxGeometry x="460" y="660" width="140" height="90" as="geometry" />
+          <mxGeometry x="460" y="630" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-61" value="증서교부식별자(PK)" style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="B7h2mf6NtwEmCr1BFMZ7-60" vertex="1">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
@@ -77,7 +77,7 @@
           <mxGeometry y="60" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-77" value="&lt;h2&gt;계약기본&lt;/h2&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="560" y="260" width="140" height="180" as="geometry" />
+          <mxGeometry x="560" y="260" width="140" height="150" as="geometry" />
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-79" value="계약 식별자(PK)" style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="B7h2mf6NtwEmCr1BFMZ7-77" vertex="1">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
@@ -88,11 +88,8 @@
         <mxCell id="FoKuOTYZ4jMNroxaZZEJ-48" value="상품코드(FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="B7h2mf6NtwEmCr1BFMZ7-77">
           <mxGeometry y="90" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="B7h2mf6NtwEmCr1BFMZ7-109" value="계좌 식별자(FK)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="B7h2mf6NtwEmCr1BFMZ7-77" vertex="1">
-          <mxGeometry y="120" width="140" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-80" value="증서교부코드" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="B7h2mf6NtwEmCr1BFMZ7-77" vertex="1">
-          <mxGeometry y="150" width="140" height="30" as="geometry" />
+          <mxGeometry y="120" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-91" value="" style="endArrow=ERzeroToMany;html=1;rounded=0;startArrow=ERmandOne;startFill=0;endFill=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -107,7 +104,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-93" value="&lt;h3&gt;계약증서교부관계&lt;/h3&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-          <mxGeometry x="460" y="510" width="140" height="90" as="geometry" />
+          <mxGeometry x="460" y="480" width="140" height="90" as="geometry" />
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-97" value="계약 식별자(PK)" style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="B7h2mf6NtwEmCr1BFMZ7-93" vertex="1">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
@@ -117,8 +114,8 @@
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-99" value="" style="endArrow=ERmandOne;html=1;rounded=0;startArrow=ERmandOne;startFill=0;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="510" as="sourcePoint" />
-            <mxPoint x="570" y="440" as="targetPoint" />
+            <mxPoint x="570" y="480" as="sourcePoint" />
+            <mxPoint x="570" y="410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-129" value="&lt;h2&gt;입출금기본&lt;/h2&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
@@ -144,24 +141,27 @@
         </mxCell>
         <mxCell id="B7h2mf6NtwEmCr1BFMZ7-141" value="" style="endArrow=ERmandOne;html=1;rounded=0;startArrow=ERmandOne;startFill=0;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="690" y="510" as="sourcePoint" />
-            <mxPoint x="690" y="440" as="targetPoint" />
+            <mxPoint x="690" y="480" as="sourcePoint" />
+            <mxPoint x="690" y="410" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="FoKuOTYZ4jMNroxaZZEJ-18" value="&lt;h3&gt;계좌기본&lt;/h3&gt;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="670" y="510" width="140" height="150" as="geometry" />
+          <mxGeometry x="670" y="480" width="140" height="180" as="geometry" />
         </mxCell>
         <mxCell id="FoKuOTYZ4jMNroxaZZEJ-19" value="계좌 식별자(PK)" style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="FoKuOTYZ4jMNroxaZZEJ-18">
           <mxGeometry y="30" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FoKuOTYZ4jMNroxaZZEJ-20" value="계좌개설일" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="FoKuOTYZ4jMNroxaZZEJ-18">
+        <mxCell id="FoKuOTYZ4jMNroxaZZEJ-92" value="계약 식별자(FK)" style="text;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="FoKuOTYZ4jMNroxaZZEJ-18">
           <mxGeometry y="60" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FoKuOTYZ4jMNroxaZZEJ-55" value="계좌만기일" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="FoKuOTYZ4jMNroxaZZEJ-18">
+        <mxCell id="FoKuOTYZ4jMNroxaZZEJ-20" value="계좌개설일" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="FoKuOTYZ4jMNroxaZZEJ-18">
           <mxGeometry y="90" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FoKuOTYZ4jMNroxaZZEJ-21" value="계좌잔고" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="FoKuOTYZ4jMNroxaZZEJ-18">
+        <mxCell id="FoKuOTYZ4jMNroxaZZEJ-55" value="계좌만기일" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="FoKuOTYZ4jMNroxaZZEJ-18">
           <mxGeometry y="120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FoKuOTYZ4jMNroxaZZEJ-21" value="계좌잔고" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="FoKuOTYZ4jMNroxaZZEJ-18">
+          <mxGeometry y="150" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="FoKuOTYZ4jMNroxaZZEJ-23" value="" style="endArrow=ERmandOne;html=1;rounded=0;startArrow=ERmandOne;startFill=0;endFill=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -243,8 +243,8 @@
         </mxCell>
         <mxCell id="FoKuOTYZ4jMNroxaZZEJ-68" value="" style="endArrow=ERoneToMany;html=1;rounded=0;startArrow=ERmandOne;startFill=0;endFill=0;entryX=0.501;entryY=1.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="660" as="sourcePoint" />
-            <mxPoint x="570" y="600" as="targetPoint" />
+            <mxPoint x="570" y="630" as="sourcePoint" />
+            <mxPoint x="570" y="570" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
