@@ -1,0 +1,11 @@
+CBP CP
+ID : ConfigUser
+pass : 123456
+
+CBP Biz
+ID : JungTeller
+pass : 123456
+
+BXM
+ID : sysadmin
+pass : sysadmin
