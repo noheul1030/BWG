@@ -1,0 +1,126 @@
+<2023-08-25>
+실습 쿼리 
+
+select * from at_staff_m where INST_CD  = 'STDA' and STAFF_ID = 'SFINI002';
+
+select * from at_staff_loin_h where INST_CD  = 'STDA' and LOIN_ID_NBR = 'JungTeller' and HST_SEQ_NBR = '5' and LOIN_DT = '20230824';
+
+
+delete from at_staff_loin_h 
+where INST_CD  = 'STDA' and LOIN_ID_NBR = 'JungTeller' and LOIN_DT = '20230824'
+order by HST_SEQ_NBR desc 
+limit 1;
+
+SELECT
+    *
+FROM
+    at_staff_s
+WHERE
+    INST_CD = 'STDA'
+    AND STAFF_ID = 'SFINI002';
+
+UPDATE 
+	at_staff_s
+SET 
+	PSWD_ERR_CNT = '0'
+	, pswd_err_cnt_excs_yn = 'N'
+	, PSWD_LOCK_EXPRTN_DTM = NULL
+WHERE 
+	INST_CD = 'STDA'
+	AND STAFF_ID = 'SFINI002'
+;
+
+
+
+
+SELECT /* 스태프기본 */ 
+       A.INST_CD                 AS instCd /*기관코드*/
+       , A.STAFF_ID              AS staffId /*스태프식별자*/
+       , A.ACTOR_ID              AS actorId /*액터식별자*/
+       , A.LOIN_ID_NBR           AS loinIdNbr /*로그인식별번호*/
+       , A.STAFF_EMPLYMNT_TP_CD  AS staffEmplymntTpCd /*스태프고용유형코드*/
+       , A.ENCRPTN_PSWD          AS encrptnPswd /*암호화비밀번호*/
+       , A.STAFF_STS_CD          AS staffStsCd /*스태프상태코드*/
+       , A.STAFF_STS_CHNG_RSN_CD AS staffStsChngRsnCd /*스태프상태변경사유코드*/
+       , A.STS_CHNG_DT           AS stsChngDt /*상태변경년월일*/
+       , A.STS_CHNG_HMS          AS stsChngHms /*상태변경시분초*/
+       , A.USER_GRP_CD           AS userGrpCd /*사용자그룹코드*/
+       , A.STAFF_NBR             AS staffNbr /*스태프번호*/
+       , A.STAFF_NM              AS staffNm /*스태프명*/
+       , A.HIRED_DT              AS hiredDt /*입사년월일*/
+       , A.RETIRE_DT             AS retireDt /*퇴사년월일*/
+       , A.LAST_CHNG_TMSTMP      AS lastChngTmstmp /*최종변경타임스탬프*/
+       , A.LAST_CHNG_GUID        AS lastChngGuid /*최종변경GUID*/
+       , A.FRST_CRTN_TMSTMP      AS frstCrtnTmstmp /*최초생성타임스탬프*/
+       , A.FRST_CRTN_GUID        AS frstCrtnGuid /*최초생성GUID*/
+       , C.DEPT_NM 			  	 AS departmentName /*부서명*/
+FROM AT_STAFF_M A
+
+JOIN at_dept_staff_r B
+ON A.INST_CD = B.INST_CD AND A.STAFF_ID = B.STAFF_ID
+
+JOIN AT_DEPT_M C
+ON B.INST_CD = C.INST_CD AND B.DEPT_ID = C.DEPT_ID
+
+WHERE  A.INST_CD = :instCd
+   AND A.STAFF_ID = :staffId;
+   
+-- 1번 테이블   
+-- SELECT * FROM at_staff_m STAFF WHERE INST_CD = 'STDA' AND STAFF_ID = 'SFINI002';
+-- 2번 테이블
+-- SELECT * FROM at_dept_staff_r REL WHERE REL.INST_CD = 'STDA' AND REL.STAFF_ID = 'SFINI002' AND REL.DEPT_ID = '10000' AND REL.DTSF_REL_SEQ_NBR = '1'; 
+-- 3번 테이블
+-- SELECT * FROM AT_DEPT_M DEPT WHERE DEPT.INST_CD = 'STDA' AND DEPT.DEPT_ID = '10000';
+
+  
+-- ANSI-SQL
+SELECT
+	 STAFF.INST_CD                 AS instCd /*기관코드*/
+       , STAFF.STAFF_ID              AS staffId /*스태프식별자*/
+       , STAFF.ACTOR_ID              AS actorId /*액터식별자*/
+       , STAFF.LOIN_ID_NBR           AS loinIdNbr /*로그인식별번호*/
+       , STAFF.STAFF_EMPLYMNT_TP_CD  AS staffEmplymntTpCd /*스태프고용유형코드*/
+       , STAFF.ENCRPTN_PSWD          AS encrptnPswd /*암호화비밀번호*/
+       , STAFF.STAFF_STS_CD          AS staffStsCd /*스태프상태코드*/
+       , STAFF.STAFF_STS_CHNG_RSN_CD AS staffStsChngRsnCd /*스태프상태변경사유코드*/
+       , STAFF.STS_CHNG_DT           AS stsChngDt /*상태변경년월일*/
+       , STAFF.STS_CHNG_HMS          AS stsChngHms /*상태변경시분초*/
+       , STAFF.USER_GRP_CD           AS userGrpCd /*사용자그룹코드*/
+       , STAFF.STAFF_NBR             AS staffNbr /*스태프번호*/
+       , STAFF.STAFF_NM              AS staffNm /*스태프명*/
+       , STAFF.HIRED_DT              AS hiredDt /*입사년월일*/
+       , STAFF.RETIRE_DT             AS retireDt /*퇴사년월일*/
+       , STAFF.LAST_CHNG_TMSTMP      AS lastChngTmstmp /*최종변경타임스탬프*/
+       , STAFF.LAST_CHNG_GUID        AS lastChngGuid /*최종변경GUID*/
+       , STAFF.FRST_CRTN_TMSTMP      AS frstCrtnTmstmp /*최초생성타임스탬프*/
+       , STAFF.FRST_CRTN_GUID        AS frstCrtnGuid /*최초생성GUID*/
+       , DEPT.DEPT_NM 				 AS deptNm /*부서명*/
+       , CMCDD.CD_NM 				 AS cdNm /*코드명*/
+       , CCD.CD_NM 					 AS txStsCdNm/*상태코드명*/
+FROM
+	AT_STAFF_M STAFF
+	
+	INNER JOIN AT_DEPT_STAFF_R REL
+	ON STAFF.INST_CD = REL.INST_CD AND STAFF.STAFF_ID = REL.STAFF_ID
+	AND REL.DTSF_REL_SEQ_NBR = '1'
+
+	INNER JOIN AT_DEPT_M DEPT
+	ON DEPT.INST_CD = REL.INST_CD AND DEPT.DEPT_ID = REL.DEPT_ID
+	
+	-- 스태프고용유형코드
+	INNER JOIN CM_CD_D CMCDD
+	ON CMCDD.CD_NBR= '11959' AND STAFF.STAFF_EMPLYMNT_TP_CD = CMCDD.CD 
+	
+	-- 스태프상태코드
+	INNER JOIN CM_CD_D CCD
+	ON CCD.CD_NBR= '11957' AND STAFF.STAFF_STS_CD = CCD.CD 
+	
+WHERE 
+	STAFF.INST_CD = :instCd
+	AND STAFF.STAFF_ID = :staffId
+;
+
+SELECT * FROM AT_STAFF_M STAFF;
+SELECT * FROM CM_CD_M WHERE CD_NBR_NM LIKE '%스태프상태%';
+SELECT * FROM cm_cd_M WHERE CD_NBR = '11959';
+SELECT * FROM cm_cd_d WHERE CD_NBR = '11957';
